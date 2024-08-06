@@ -39,6 +39,8 @@
     {"id":{"name":"scrPeixes","path":"scripts/scrPeixes/scrPeixes.yy",},},
     {"id":{"name":"sprPeixeTeste_icone","path":"sprites/sprPeixeTeste_icone/sprPeixeTeste_icone.yy",},},
     {"id":{"name":"sprPeixeTeste","path":"sprites/sprPeixeTeste/sprPeixeTeste.yy",},},
+    {"id":{"name":"sprTilesetCenario","path":"sprites/sprTilesetCenario/sprTilesetCenario.yy",},},
+    {"id":{"name":"tilesetCenario","path":"tilesets/tilesetCenario/tilesetCenario.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
