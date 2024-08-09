@@ -2,6 +2,10 @@
 etapaFisgada=0;
 porcentagemFisgada=1/3;
 naArea=false;
+movSpeedX=0;
+movSpeedY=0;
+posMinigameX=0;
+posMinigameY=0;
 #endregion
 
 #region Exibição
@@ -13,3 +17,5 @@ raioMinigameBarraFoco=0.5;
 raioMinigameBarraFX=0;
 texBarra=sprite_get_texture(sprBarraMinigame,0);
 #endregion
+
+display_set_gui_maximize(2,2);

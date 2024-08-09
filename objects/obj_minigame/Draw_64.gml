@@ -29,5 +29,25 @@ draw_primitive_end();
 #endregion
 #region Região do Minigame
 draw_sprite_ext(sprMinigame,1,posX,posY,raioMinigame,raioMinigame,0,c_white,1);
+gpu_set_blendenable(false);
+gpu_set_colorwriteenable(false,false,false,true);
+draw_set_alpha(0);
+draw_set_color(c_black);
+draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),false);
+draw_set_alpha(1);
+draw_set_color(c_white);
+draw_circle(posX-1,posY-1,107*raioMinigame,false);
+gpu_set_blendenable(true);
+gpu_set_colorwriteenable(true,true,true,true);
+gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
+gpu_set_alphatestenable(true);
+//draw_sprite_ext(sprMinigame,1,posX,posY,raioMinigame,raioMinigame,0,c_white,1);
+draw_sprite_tiled(sprTexLago,0,posMinigameX/2,posMinigameY/2);
+gpu_set_blendmode_ext(bm_src_alpha,bm_inv_dest_alpha);
+draw_sprite_tiled_ext(sprTexFXLago,0,(posMinigameX/2)+(current_time/100),(posMinigameY/2)+(current_time/100),1,1,c_white,sin(degtorad(current_time/10))/10);
+draw_sprite_tiled_ext(sprTexFXLago,1,(posMinigameX/2)+(current_time/100),(posMinigameY/2)+(current_time/100),1,1,c_white,sin(degtorad((current_time/10)+120))/10);
+draw_sprite_tiled_ext(sprTexFXLago,2,(posMinigameX/2)+(current_time/100),(posMinigameY/2)+(current_time/100),1,1,c_white,sin(degtorad((current_time/10)+240))/10);
+gpu_set_alphatestenable(false);
+gpu_set_blendmode(bm_normal);
 #endregion
 //draw_surface_ext(surfaceInterface,posX-(150*raioMinigame),posY-(150*raioMinigame),raioMinigame,raioMinigame,0,c_white,1);
