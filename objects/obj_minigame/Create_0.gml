@@ -6,6 +6,7 @@ movSpeedX=0;
 movSpeedY=0;
 posMinigameX=0;
 posMinigameY=0;
+surfaceMinigame=surface_create(300,300);
 #endregion
 
 #region Exibição
