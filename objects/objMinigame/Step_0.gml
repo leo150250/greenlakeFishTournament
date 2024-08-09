@@ -10,6 +10,16 @@ switch (etapaFisgada) {
 		if (keyboard_check(vk_right)) { movSpeedX-=2; }
 		if (keyboard_check(vk_up)) { movSpeedY+=2; }
 		if (keyboard_check(vk_down)) { movSpeedY-=2; }
+		var peixeCentro=collision_circle(150,150,16,objMinigamePeixe,false,true);
+		if (peixeCentro!=noone) && (keyboard_check_pressed(vk_space)) {
+			peixeFisgado=peixeCentro;
+			peixeFisgado.fisgado=true;
+			peixeFisgado.xFoco=150;
+			peixeFisgado.yFoco=150;
+			peixeFisgado.multiplicadorAgito=2;
+			etapaFisgada=1;
+			raioMinigame=1.1;
+		}
 	} break;
 	case 1: {
 		raioMinigameBarraFoco=1;
@@ -19,20 +29,26 @@ switch (etapaFisgada) {
 		if (keyboard_check(vk_right)) { movSpeedX-=0.25; }
 		if (keyboard_check(vk_up)) { movSpeedY+=0.25; }
 		if (keyboard_check(vk_down)) { movSpeedY-=0.25; }
-		if (naArea) {
-			porcentagemFisgada+=0.002;
+		if (point_distance(150,150,peixeFisgado.x,peixeFisgado.y)<32) {
+			porcentagemFisgada+=0.0015;
 			if (porcentagemFisgada>=1) {
 				porcentagemFisgada=1;
 				etapaFisgada=2;
 				raioMinigame=1.05;
 				raioMinigameBarra=1.05;
+				peixeFisgado.xFoco=150;
+				peixeFisgado.yFoco=150;
+				peixeFisgado.alarm[0]=0;
 			}
 		} else {
-			porcentagemFisgada-=0.003;
+			porcentagemFisgada-=0.002;
 			if (porcentagemFisgada<=0) {
 				etapaFisgada=-1;
 				raioMinigame=0.975;
 				raioMinigameBarra=0.975;
+				peixeFisgado.fisgado=false;
+				peixeFisgado.multiplicadorAgito=3;
+				peixeFisgado=noone;
 			}
 		}
 	} break;
@@ -41,17 +57,19 @@ switch (etapaFisgada) {
 		movSpeedY/=2;
 	} break;
 }
+if (instance_number(objMinigamePeixe)<10) {
+	var direcaoNovoPeixe=random(360);
+	instance_create_layer(150+lengthdir_x(300,direcaoNovoPeixe),150+lengthdir_y(300,direcaoNovoPeixe),layer,objMinigamePeixe);
+}
 posMinigameX+=movSpeedX;
 posMinigameY+=movSpeedY;
-
-//DEBUG
-if (keyboard_check_pressed(ord("E"))) {
-	etapaFisgada=(etapaFisgada+1)%2;
-}
-if (keyboard_check(ord("R"))) {
-	naArea=true;
-} else {
-	naArea=false;
+with (objMinigamePeixe) {
+	x+=other.movSpeedX;
+	y+=other.movSpeedY;
+	xFX+=other.movSpeedX;
+	yFX+=other.movSpeedY;
+	xFoco+=other.movSpeedX;
+	yFoco+=other.movSpeedY;
 }
 
 #region Suavização da exibição

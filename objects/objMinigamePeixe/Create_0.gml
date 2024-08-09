@@ -1,0 +1,10 @@
+image_xscale=0.75;
+image_yscale=0.75;
+image_blend=c_black;
+multiplicadorAgito=1;
+xFX=x;
+yFX=y;
+xFoco=x-(100*multiplicadorAgito)+random(200*multiplicadorAgito);
+yFoco=y-(100*multiplicadorAgito)+random(200*multiplicadorAgito);
+alarm[0]=(120/multiplicadorAgito)-(5+random(10));
+fisgado=false;

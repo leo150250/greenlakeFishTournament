@@ -7,6 +7,13 @@ movSpeedY=0;
 posMinigameX=0;
 posMinigameY=0;
 surfaceMinigame=surface_create(300,300);
+peixeFisgado=noone;
+#endregion
+
+#region Criação de peixes
+repeat(10) {
+	instance_create_layer(150-250+random(500),150-250+random(500),layer,objMinigamePeixe);
+}
 #endregion
 
 #region Exibição
