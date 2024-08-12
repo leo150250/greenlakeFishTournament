@@ -38,6 +38,7 @@
     {"id":{"name":"objCampoDePesca","path":"objects/objCampoDePesca/objCampoDePesca.yy",},},
     {"id":{"name":"objCampoDePescaDefinidor","path":"objects/objCampoDePescaDefinidor/objCampoDePescaDefinidor.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scrControles","path":"scripts/scrControles/scrControles.yy",},},
     {"id":{"name":"scrPeixes","path":"scripts/scrPeixes/scrPeixes.yy",},},
     {"id":{"name":"sprCampoDePesca","path":"sprites/sprCampoDePesca/sprCampoDePesca.yy",},},
     {"id":{"name":"sprCampoDePescaDefinidor","path":"sprites/sprCampoDePescaDefinidor/sprCampoDePescaDefinidor.yy",},},
