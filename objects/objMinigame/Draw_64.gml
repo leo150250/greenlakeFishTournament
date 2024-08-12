@@ -9,6 +9,7 @@ if (!surface_exists(surfaceMinigame)) {
 surface_set_target(surfaceMinigame);
 draw_sprite_tiled(sprTexLago,0,posMinigameX/2,posMinigameY/2);
 with (objMinigamePeixe) {
+	part_system_drawit(particulas);
 	draw_self();
 	if (other.etapaFisgada==0) {
 		if (point_distance(x,y,150,150)<16) {

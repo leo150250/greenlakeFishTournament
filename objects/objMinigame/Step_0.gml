@@ -39,6 +39,8 @@ switch (etapaFisgada) {
 				peixeFisgado.xFoco=150;
 				peixeFisgado.yFoco=150;
 				peixeFisgado.alarm[0]=0;
+				peixeFisgado.divisorMovimento=5;
+				alarm[0]=30;
 			}
 		} else {
 			porcentagemFisgada-=0.002;
@@ -49,7 +51,24 @@ switch (etapaFisgada) {
 				peixeFisgado.fisgado=false;
 				peixeFisgado.multiplicadorAgito=3;
 				peixeFisgado=noone;
+				alarm[0]=60;
 			}
+		}
+	} break;
+	case -1: {
+		if (raioMinigame<=0) && (raioMinigameBarra<=0) {
+			//Encerra o minigame
+			instance_destroy(objMinigamePeixe);
+			instance_destroy();
+		}
+	} break;
+	case 2: {
+		movSpeedX/=1.5;
+		movSpeedY/=1.5;
+		if (raioMinigame<=0) && (raioMinigameBarra<=0) {
+			//TODO: Inserir animação do ícone do peixe indo para o personagem, e exibir o peixe pego
+			instance_destroy(objMinigamePeixe);
+			instance_destroy();
 		}
 	} break;
 	default: {
