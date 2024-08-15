@@ -1,7 +1,8 @@
-var _horizontal_direction = keyboard_check(vk_right) - keyboard_check(vk_left);
-var _vertical_direction = keyboard_check(vk_down) - keyboard_check(vk_up);
+var _direction = move_direction();
 
-var _dx = velocity * _horizontal_direction;
-var _dy = velocity * _vertical_direction;
+var _dx = velocity * _direction.x;
+var _dy = velocity * _direction.y;
 
-move_and_collide(_dx, _dy, obj_player, 2);
+move_and_collide(_dx, _dy, obj_obstacle, 2);
+
+stay_inside_room();
