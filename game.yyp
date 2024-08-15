@@ -45,6 +45,7 @@
     {"id":{"name":"objMinigamePeixe","path":"objects/objMinigamePeixe/objMinigamePeixe.yy",},},
     {"id":{"name":"psBolhas","path":"particles/psBolhas/psBolhas.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scrControles","path":"scripts/scrControles/scrControles.yy",},},
     {"id":{"name":"scrPeixes","path":"scripts/scrPeixes/scrPeixes.yy",},},
     {"id":{"name":"GM_Electricity_spr_Electricity1","path":"sprites/GM_Electricity_spr_Electricity1/GM_Electricity_spr_Electricity1.yy",},},
     {"id":{"name":"GM_Fire_spr_Fire","path":"sprites/GM_Fire_spr_Fire/GM_Fire_spr_Fire.yy",},},
