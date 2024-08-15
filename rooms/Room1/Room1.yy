@@ -116,7 +116,6 @@
     {"name":"inst_3907A013","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_65A0FC5E","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2B6D8EC5","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_7039A1BC","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -249,7 +248,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objCampoDePescaDefinidor","path":"objects/objCampoDePescaDefinidor/objCampoDePescaDefinidor.yy",},"propertyId":{"name":"idPeixes","path":"objects/objCampoDePescaDefinidor/objCampoDePescaDefinidor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[10,11,14]",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":12.0,"scaleY":8.0,"x":1536.0,"y":1472.0,},
         {"$GMRInstance":"v1","%Name":"inst_65A0FC5E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_65A0FC5E","objectId":{"name":"objCampoDePesca","path":"objects/objCampoDePesca/objCampoDePesca.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":1312.0,},
-        {"$GMRInstance":"v1","%Name":"inst_7039A1BC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7039A1BC","objectId":{"name":"objMinigame","path":"objects/objMinigame/objMinigame.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":160.0,},
       ],"layers":[],"name":"Instances_camposDePesca","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Camada_de_Blocos_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Camada_de_Blocos_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":60,"SerialiseWidth":60,"TileCompressedData":[
           -3,1,9,3,2,3,4,3,3,2,2,3,-5,4,1,1,-3,4,-2,2,2,3,1,-3,2,11,4,2,2,1,4,2,3,3,4,3,1,-3,3,11,4,1,3,4,2,1,
@@ -362,7 +360,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":640,"hport":1080,"hspeed":-1,"hview":540,"inherit":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"vborder":640,"visible":true,"vspeed":-1,"wport":1920,"wview":960,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
@@ -374,7 +372,7 @@
   "viewSettings":{
     "clearDisplayBuffer":true,
     "clearViewBackground":false,
-    "enableViews":false,
+    "enableViews":true,
     "inheritViewSettings":false,
   },
   "volume":1.0,

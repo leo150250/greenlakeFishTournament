@@ -464,9 +464,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="343.7044"
-     inkscape:cy="26.642773"
+     inkscape:zoom="1.4"
+     inkscape:cx="194.28571"
+     inkscape:cy="91.785714"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -477,7 +477,7 @@
      inkscape:showpageshadow="2"
      inkscape:deskcolor="#d1d1d1"
      inkscape:window-width="1920"
-     inkscape:window-height="1057"
+     inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1">
@@ -499,7 +499,10 @@
        id="page3"
        margin="0"
        bleed="0"
-       inkscape:label="sprJanela" />
+       inkscape:label="sprJanela"
+       inkscape:export-filename="sprJanela.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <inkscape:page
        x="138"
        y="0"
@@ -508,7 +511,10 @@
        id="page4"
        margin="0"
        bleed="0"
-       inkscape:label="sprBotao" />
+       inkscape:label="sprBotao"
+       inkscape:export-filename="sprBotao.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <inkscape:page
        x="276"
        y="0"
