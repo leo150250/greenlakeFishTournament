@@ -149,7 +149,7 @@ function ControleMenu() {
 		retorno=true;
 	}
 	return retorno;
-
+}
 function ControleAplicar() {
 	var retorno=false;
 	if (keyboard_check_pressed(vk_enter))

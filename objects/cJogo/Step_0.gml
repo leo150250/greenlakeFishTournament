@@ -6,3 +6,8 @@ for (var i = 0; i<4; i++) {
 	numerosFXSuave[i] += (numerosFXFoco[i] - numerosFX[i]) / 2;
 	numerosFX[i] += (numerosFXSuave[i] - numerosFX[i]) / 2;
 }
+
+//Debug
+if (keyboard_check(vk_escape)) {
+	game_end();
+}
