@@ -36,6 +36,8 @@
   },
   "name":"game",
   "resources":[
+    {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
+    {"id":{"name":"cJogo","path":"objects/cJogo/cJogo.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"objCampoDePesca","path":"objects/objCampoDePesca/objCampoDePesca.yy",},},
     {"id":{"name":"objCampoDePescaDefinidor","path":"objects/objCampoDePescaDefinidor/objCampoDePescaDefinidor.yy",},},
@@ -50,6 +52,7 @@
     {"id":{"name":"sprBarraMinigame","path":"sprites/sprBarraMinigame/sprBarraMinigame.yy",},},
     {"id":{"name":"sprCampoDePesca","path":"sprites/sprCampoDePesca/sprCampoDePesca.yy",},},
     {"id":{"name":"sprCampoDePescaDefinidor","path":"sprites/sprCampoDePescaDefinidor/sprCampoDePescaDefinidor.yy",},},
+    {"id":{"name":"sprHUDTopo","path":"sprites/sprHUDTopo/sprHUDTopo.yy",},},
     {"id":{"name":"sprMinigame","path":"sprites/sprMinigame/sprMinigame.yy",},},
     {"id":{"name":"sprMinigameMira","path":"sprites/sprMinigameMira/sprMinigameMira.yy",},},
     {"id":{"name":"sprPeixeTeste_icone","path":"sprites/sprPeixeTeste_icone/sprPeixeTeste_icone.yy",},},
