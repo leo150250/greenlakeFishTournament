@@ -33,12 +33,13 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.800.0.602",
   },
   "name":"game",
   "resources":[
     {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
     {"id":{"name":"cJogo","path":"objects/cJogo/cJogo.yy",},},
+    {"id":{"name":"obj_minimap","path":"objects/obj_minimap/obj_minimap.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"objCampoDePesca","path":"objects/objCampoDePesca/objCampoDePesca.yy",},},
     {"id":{"name":"objCampoDePescaDefinidor","path":"objects/objCampoDePescaDefinidor/objCampoDePescaDefinidor.yy",},},
@@ -46,7 +47,7 @@
     {"id":{"name":"objMinigamePeixe","path":"objects/objMinigamePeixe/objMinigamePeixe.yy",},},
     {"id":{"name":"psBolhas","path":"particles/psBolhas/psBolhas.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"scr_camera","path":"scripts/scr_camera/scr_camera.yy",},},
+    {"id":{"name":"scr_minimap","path":"scripts/scr_minimap/scr_minimap.yy",},},
     {"id":{"name":"scr_player","path":"scripts/scr_player/scr_player.yy",},},
     {"id":{"name":"scrControles","path":"scripts/scrControles/scrControles.yy",},},
     {"id":{"name":"scrPeixes","path":"scripts/scrPeixes/scrPeixes.yy",},},

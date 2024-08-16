@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_camera",
+  "%Name":"scr_minimap",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_camera",
+  "name":"scr_minimap",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
