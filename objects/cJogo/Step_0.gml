@@ -6,6 +6,12 @@ for (var i = 0; i<4; i++) {
 	numerosFXSuave[i] += (numerosFXFoco[i] - numerosFX[i]) / 2;
 	numerosFX[i] += (numerosFXSuave[i] - numerosFX[i]) / 2;
 }
+resultadoPeixeFXSuave += (resultadoPeixeFXFoco - resultadoPeixeFX) / 8;
+resultadoPeixeFX += (resultadoPeixeFXSuave - resultadoPeixeFX) / 8;	
+if (estado==estadosJogo.resultadoPesca){
+	rotacaoPeixe/=1.1;
+	escalaPeixe+=(2-escalaPeixe)/15;
+}
 
 //Debug
 if (keyboard_check(vk_escape)) {

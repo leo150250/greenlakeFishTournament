@@ -13,8 +13,8 @@
   ],
   "name":"psBolhas",
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Particle Systems",
+    "path":"folders/Particle Systems.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

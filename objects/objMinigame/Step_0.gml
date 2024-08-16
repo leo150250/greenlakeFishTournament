@@ -78,7 +78,9 @@ switch (etapaFisgada) {
 }
 if (instance_number(objMinigamePeixe)<10) {
 	var direcaoNovoPeixe=random(360);
-	instance_create_layer(150+lengthdir_x(300,direcaoNovoPeixe),150+lengthdir_y(300,direcaoNovoPeixe),layer,objMinigamePeixe);
+	instance_create_layer(150+lengthdir_x(300,direcaoNovoPeixe),150+lengthdir_y(300,direcaoNovoPeixe),layer,objMinigamePeixe,{
+		idPeixe:SelecionarPeixeAleatorio(idPeixes)
+	});
 }
 posMinigameX+=movSpeedX;
 posMinigameY+=movSpeedY;
