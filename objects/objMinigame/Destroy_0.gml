@@ -6,4 +6,5 @@ if (etapaFisgada==-1) {
 	cJogo.resultadoPeixeFXFoco=6;
 	cJogo.rotacaoPeixe=720;
 	cJogo.escalaPeixe=0;
+	obj_player.estado=estadosJogador.aguardando;
 }

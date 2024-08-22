@@ -99,3 +99,16 @@ raioMinigame += (raioMinigameFX - raioMinigame) / 3;
 raioMinigameBarraFX += (raioMinigameBarraFoco - raioMinigameBarra) / 8;
 raioMinigameBarra += (raioMinigameBarraFX - raioMinigameBarra) / 16;
 #endregion
+
+//DEBUG
+if (keyboard_check_pressed(vk_escape)) {
+	etapaFisgada=-1;
+	raioMinigame=0.975;
+	raioMinigameBarra=0.975;
+	if (peixeFisgado!=noone) {
+		peixeFisgado.fisgado=false;
+		peixeFisgado.multiplicadorAgito=3;
+	}
+	peixeFisgado=noone;
+	alarm[0]=1;
+}

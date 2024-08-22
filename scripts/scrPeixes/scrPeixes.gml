@@ -1,4 +1,5 @@
 global.peixes = [];
+global.peixesPegos = [];
 //Classes
 function Comportamento(_frequencia,_velocidade) constructor {
 	frequencia = _frequencia;
@@ -11,6 +12,8 @@ function Peixe(_nome, _spriteIcone, _spritePeixe, _valor, _descricao, _comportam
 	valor = _valor;
 	descricao = _descricao;
 	comportamento = _comportamento;
+	idPeixe = array_length(global.peixes);
+	global.peixesPegos[idPeixe]=0;
 	if (spritePeixe==sprPeixeTeste) || (spriteIcone=sprPeixeTeste_icone) {
 		show_debug_message("Peixe "+nome+" está com sprites padrões!");
 	}

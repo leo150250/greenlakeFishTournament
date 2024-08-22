@@ -28,5 +28,5 @@ raioMinigameBarraFX=0;
 texBarra=sprite_get_texture(sprBarraMinigame,0);
 #endregion
 
-display_set_gui_maximize(2,2);
 cJogo.estado=estadosJogo.miniGamePesca;
+show_debug_message(idPeixes);

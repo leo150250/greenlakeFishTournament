@@ -14,6 +14,7 @@ resultadoPeixeFXSuave=0;
 resultadoPeixeFX=0;
 rotacaoPeixe=720;
 escalaPeixe=0;
+posXPeixe=0;
 idPeixePescado=0;
 
 spritePeixePescado=sprite_duplicate(sprPeixeTeste);
