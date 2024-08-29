@@ -3,6 +3,7 @@ var posX=(display_get_gui_width()/2);
 var posY=(display_get_gui_height()/2);
 
 #region Surface do minigame
+draw_set_alpha(1);
 if (!surface_exists(surfaceMinigame)) {
 	surfaceMinigame=surface_create(300,300);
 }
@@ -46,12 +47,13 @@ var texX=1;
 for (var i = 0; i < porcentagemFisgada*36; i++) {
 	draw_vertex_texture(posX-sin(degtorad(i*10))*(145*raioMinigameBarra),posY-cos(degtorad(i*10))*(145*raioMinigameBarra),texX,0);
 	draw_vertex_texture(posX-sin(degtorad(i*10))*(115*raioMinigameBarra),posY-cos(degtorad(i*10))*(115*raioMinigameBarra),texX,1);
-	if (texX==1) {
-		texX=0;
+	if (texX==1) || (texX==0.7) {
+		texX=0.3;
 	} else {
-		texX=1;
+		texX=0.7;
 	}
 }
+texX=round(texX);
 draw_vertex_texture(posX-sin(degtorad(porcentagemFisgada*360))*(145*raioMinigameBarra),posY-cos(degtorad(porcentagemFisgada*360))*(145*raioMinigameBarra),texX,0);
 draw_vertex_texture(posX-sin(degtorad(porcentagemFisgada*360))*(115*raioMinigameBarra),posY-cos(degtorad(porcentagemFisgada*360))*(115*raioMinigameBarra),texX,1);
 draw_primitive_end();

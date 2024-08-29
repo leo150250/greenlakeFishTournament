@@ -78,7 +78,9 @@ switch (etapaFisgada) {
 }
 if (instance_number(objMinigamePeixe)<10) {
 	var direcaoNovoPeixe=random(360);
-	instance_create_layer(150+lengthdir_x(300,direcaoNovoPeixe),150+lengthdir_y(300,direcaoNovoPeixe),layer,objMinigamePeixe);
+	instance_create_layer(150+lengthdir_x(300,direcaoNovoPeixe),150+lengthdir_y(300,direcaoNovoPeixe),layer,objMinigamePeixe,{
+		idPeixe:SelecionarPeixeAleatorio(idPeixes)
+	});
 }
 posMinigameX+=movSpeedX;
 posMinigameY+=movSpeedY;
@@ -97,3 +99,16 @@ raioMinigame += (raioMinigameFX - raioMinigame) / 3;
 raioMinigameBarraFX += (raioMinigameBarraFoco - raioMinigameBarra) / 8;
 raioMinigameBarra += (raioMinigameBarraFX - raioMinigameBarra) / 16;
 #endregion
+
+//DEBUG
+if (keyboard_check_pressed(vk_escape)) {
+	etapaFisgada=-1;
+	raioMinigame=0.975;
+	raioMinigameBarra=0.975;
+	if (peixeFisgado!=noone) {
+		peixeFisgado.fisgado=false;
+		peixeFisgado.multiplicadorAgito=3;
+	}
+	peixeFisgado=noone;
+	alarm[0]=1;
+}

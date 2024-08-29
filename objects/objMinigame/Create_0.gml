@@ -12,7 +12,9 @@ peixeFisgado=noone;
 
 #region Criação de peixes
 repeat(10) {
-	instance_create_layer(150-250+random(500),150-250+random(500),layer,objMinigamePeixe);
+	instance_create_layer(150-250+random(500),150-250+random(500),layer,objMinigamePeixe,{
+		idPeixe:SelecionarPeixeAleatorio(idPeixes)
+	});
 }
 #endregion
 
@@ -26,4 +28,5 @@ raioMinigameBarraFX=0;
 texBarra=sprite_get_texture(sprBarraMinigame,0);
 #endregion
 
-display_set_gui_maximize(2,2);
+cJogo.estado=estadosJogo.miniGamePesca;
+show_debug_message(idPeixes);
