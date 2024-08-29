@@ -1,0 +1,1 @@
+surface_free(background_surface);
