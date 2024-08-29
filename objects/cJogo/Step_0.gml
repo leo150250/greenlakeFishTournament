@@ -20,7 +20,12 @@ if (estado==estadosJogo.resultadoPesca){
 		global.peixesPegos[idPeixePescado]++;
 	}
 } else if (estado==estadosJogo.moverJogador) {
-	posXPeixe+=-1+posXPeixe;
+	if (escalaPeixe>0) {
+		escalaPeixe-=0.01;
+	} else {
+		escalaPeixe=0;
+	}
+	posXPeixe+=(-1+posXPeixe)/5;
 	if (resultadoPeixeFX < 0) {
 		resultadoPeixeFXSuave = 0;
 		resultadoPeixeFX = 0;
