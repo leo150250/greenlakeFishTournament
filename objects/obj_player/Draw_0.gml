@@ -6,5 +6,11 @@ if (estado==estadosJogador.carregandoIsca) {
 if (estado==estadosJogador.lancandoIsca || estado==estadosJogador.aguardando) {
 	draw_set_alpha(1);
 	draw_set_color(c_red);
-	draw_circle(iscaX,iscaY+iscaZ,4,false);
+	draw_circle(iscaX,iscaY+iscaZ,3,false);
+	draw_set_color(c_black);
+	var origemLinha={x:0,y:0};
+	switch (sprite_index) {
+		
+	}
+	draw_line(x,y-32,iscaX,iscaY+iscaZ);
 }
