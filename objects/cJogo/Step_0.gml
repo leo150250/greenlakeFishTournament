@@ -18,6 +18,7 @@ if (estado==estadosJogo.resultadoPesca){
 		obj_player.estado=estadosJogador.normal;
 		resultadoPeixeFXFoco = 0;
 		global.peixesPegos[idPeixePescado]++;
+		obj_player.alarm[0]=5;
 	}
 } else if (estado==estadosJogo.moverJogador) {
 	if (escalaPeixe>0) {

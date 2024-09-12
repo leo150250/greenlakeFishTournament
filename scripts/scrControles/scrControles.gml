@@ -1,4 +1,5 @@
 #region Auxiliares gamepad
+gamepad_set_axis_deadzone(0,0.2);
 global.gamepad_axis_values=[];
 for (var i=0; i<gamepad_get_device_count(); i++) {
 	global.gamepad_axis_values[i][0][0]=-1;

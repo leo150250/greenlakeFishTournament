@@ -6,12 +6,12 @@ switch (etapaFisgada) {
 		raioMinigameBarraFoco=0.5;
 		movSpeedX/=1.5;
 		movSpeedY/=1.5;
-		if (keyboard_check(vk_left)) { movSpeedX+=2; }
-		if (keyboard_check(vk_right)) { movSpeedX-=2; }
-		if (keyboard_check(vk_up)) { movSpeedY+=2; }
-		if (keyboard_check(vk_down)) { movSpeedY-=2; }
+		if (ControleEsquerda()) { movSpeedX+=2; }
+		if (ControleDireita()) { movSpeedX-=2; }
+		if (ControleAcima()) { movSpeedY+=2; }
+		if (ControleAbaixo()) { movSpeedY-=2; }
 		var peixeCentro=collision_circle(150,150,16,objMinigamePeixe,false,true);
-		if (peixeCentro!=noone) && (keyboard_check_pressed(vk_space)) {
+		if (peixeCentro!=noone) && (ControleAcao()) {
 			peixeFisgado=peixeCentro;
 			peixeFisgado.fisgado=true;
 			peixeFisgado.xFoco=150;
@@ -25,10 +25,10 @@ switch (etapaFisgada) {
 		raioMinigameBarraFoco=1;
 		movSpeedX/=1.05;
 		movSpeedY/=1.05;
-		if (keyboard_check(vk_left)) { movSpeedX+=0.25; }
-		if (keyboard_check(vk_right)) { movSpeedX-=0.25; }
-		if (keyboard_check(vk_up)) { movSpeedY+=0.25; }
-		if (keyboard_check(vk_down)) { movSpeedY-=0.25; }
+		if (ControleEsquerda()) { movSpeedX+=0.25; }
+		if (ControleDireita()) { movSpeedX-=0.25; }
+		if (ControleAcima()) { movSpeedY+=0.25; }
+		if (ControleAbaixo()) { movSpeedY-=0.25; }
 		if (point_distance(150,150,peixeFisgado.x,peixeFisgado.y)<32) {
 			porcentagemFisgada+=0.0015;
 			if (porcentagemFisgada>=1) {
@@ -40,6 +40,7 @@ switch (etapaFisgada) {
 				peixeFisgado.yFoco=150;
 				peixeFisgado.alarm[0]=0;
 				peixeFisgado.divisorMovimento=5;
+				obj_player.podePescar = false;
 				alarm[0]=30;
 			}
 		} else {
@@ -60,6 +61,7 @@ switch (etapaFisgada) {
 			//Encerra o minigame
 			instance_destroy(objMinigamePeixe);
 			instance_destroy();
+			obj_player.alarm[0]=5;
 		}
 	} break;
 	case 2: {
@@ -100,8 +102,7 @@ raioMinigameBarraFX += (raioMinigameBarraFoco - raioMinigameBarra) / 8;
 raioMinigameBarra += (raioMinigameBarraFX - raioMinigameBarra) / 16;
 #endregion
 
-//DEBUG
-if (keyboard_check_pressed(vk_escape)) {
+if (ControleMenu()) {
 	etapaFisgada=-1;
 	raioMinigame=0.975;
 	raioMinigameBarra=0.975;

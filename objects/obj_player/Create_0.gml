@@ -6,5 +6,6 @@ iscaX = x;
 iscaY = y;
 iscaZ = 0;
 iscaZspeed = 0;
+podePescar = true;
 
 minimap = instance_create_layer(0, 0, layer, obj_minimap);

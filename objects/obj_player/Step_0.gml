@@ -7,7 +7,7 @@ if (cJogo.estado=estadosJogo.moverJogador) {
 			var _dy = velocity * _direction.y;
 			move_and_collide(_dx, _dy, objCampoDePesca, 2);
 			//Carregar a isca
-			if (ControleAcao()) {
+			if (ControleAcao()) && (podePescar) {
 				potenciaIsca=0;
 				estado=estadosJogador.carregandoIsca;
 			}
