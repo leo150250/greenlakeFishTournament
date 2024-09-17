@@ -58,5 +58,5 @@ Temporary Items
 *.resource_order
 *.old
 
-# Musescore
+# Arquivos do Musescore
 .mscbackup
