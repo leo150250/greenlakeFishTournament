@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"musTitulo",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":75.07581,
+  "name":"musTitulo",
+  "parent":{
+    "name":"Músicas",
+    "path":"folders/Sounds/Músicas.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"musTitulo.mp3",
+  "type":0,
+  "volume":1.0,
+}

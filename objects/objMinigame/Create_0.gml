@@ -30,3 +30,5 @@ texBarra=sprite_get_texture(sprBarraMinigame,0);
 
 cJogo.estado=estadosJogo.miniGamePesca;
 show_debug_message(idPeixes);
+executarSom(sndLoopAgua,true);
+somFisgada=-1;

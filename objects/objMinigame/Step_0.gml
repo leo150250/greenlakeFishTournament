@@ -19,6 +19,8 @@ switch (etapaFisgada) {
 			peixeFisgado.multiplicadorAgito=2;
 			etapaFisgada=1;
 			raioMinigame=1.1;
+			executarMusica(musPesca);
+			executarSom(sndAnzolFisgou);
 		}
 	} break;
 	case 1: {
@@ -31,7 +33,14 @@ switch (etapaFisgada) {
 		if (ControleAbaixo()) { movSpeedY-=0.25; }
 		if (point_distance(150,150,peixeFisgado.x,peixeFisgado.y)<32) {
 			porcentagemFisgada+=0.0015;
+			if (somFisgada!=0) {
+				somFisgada=0;
+				audio_stop_sound(sndMolineteRapido);
+				executarSom(sndMolineteLento,true);
+			}
 			if (porcentagemFisgada>=1) {
+				audio_stop_sound(sndMolineteLento);
+				executarSom(sndPegouPeixe);
 				porcentagemFisgada=1;
 				etapaFisgada=2;
 				raioMinigame=1.05;
@@ -45,7 +54,13 @@ switch (etapaFisgada) {
 			}
 		} else {
 			porcentagemFisgada-=0.002;
+			if (somFisgada!=1) {
+				somFisgada=1;
+				audio_stop_sound(sndMolineteLento);
+				executarSom(sndMolineteRapido,true);
+			}
 			if (porcentagemFisgada<=0) {
+				audio_stop_sound(sndMolineteRapido);
 				etapaFisgada=-1;
 				raioMinigame=0.975;
 				raioMinigameBarra=0.975;

@@ -15,6 +15,9 @@ if (cJogo.estado=estadosJogo.moverJogador) {
 				}
 			} else {
 				image_speed = 1;
+				if (!audio_is_playing(sndPassos)) {
+					executarSom(sndPassos);
+				}
 				switch (direcao) {
 					case 0: sprite_index = obterSpriteJogador(sprJogadorF_andandoLado); image_xscale=1; break;
 					case 90: sprite_index = obterSpriteJogador(sprJogadorF_andandoCima); break;
@@ -42,7 +45,14 @@ if (cJogo.estado=estadosJogo.moverJogador) {
 			if (potenciaIsca>1) {
 				potenciaIsca-=1;
 			}
+			if (somCarregarIsca==-1) {
+				somCarregarIsca=executarSom(sndLoopAnzol,true);
+			}
+			audio_sound_pitch(somCarregarIsca,5+((1-abs((frac(potenciaIsca)*2)-1))*10));
 			if (ControleAcao_soltar()) {
+				audio_stop_sound(somCarregarIsca);
+				somCarregarIsca=-1;
+				executarSom(sndAnzolLancamento);
 				potenciaIsca=1-abs((frac(potenciaIsca)*2)-1);
 				estado=estadosJogador.lancandoIsca;
 				iscaX=x;
@@ -66,6 +76,7 @@ if (cJogo.estado=estadosJogo.moverJogador) {
 					});
 					image_index = 2;
 					estado=estadosJogador.aguardando;
+					executarSom(sndAnzolAgua);
 				} else {
 					estado=estadosJogador.normal;
 				}
