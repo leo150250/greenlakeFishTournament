@@ -1,19 +1,17 @@
 function move_direction() {
-	if (ControleAcima()) {
-		direcao=90;
-	}
-	if (ControleAbaixo()) {
-		direcao=270;
-	}
 	if (ControleEsquerda()) {
 		direcao=180;
-	}
-	if (ControleDireita()) {
+	} else if (ControleDireita()) {
 		direcao=0;
+	} else if (ControleAcima()) {
+		direcao=90;
+	} else if (ControleAbaixo()) {
+		direcao=270;
 	}
 	return {
 		x: ControleDireita() - ControleEsquerda(),
-		y: ControleAbaixo() - ControleAcima()
+		y: ControleAbaixo() - ControleAcima(),
+		speed: ControleDireita() + ControleEsquerda() + ControleAcima() + ControleAbaixo()
 	};
 }
 
