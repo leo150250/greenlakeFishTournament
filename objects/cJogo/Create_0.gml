@@ -19,3 +19,5 @@ idPeixePescado=0;
 
 spritePeixePescado=sprite_duplicate(sprPeixeTeste);
 sprite_set_offset(spritePeixePescado,sprite_get_width(spritePeixePescado)/2,sprite_get_height(spritePeixePescado)/2);
+
+executarMusica(musOverworld);

@@ -8,3 +8,7 @@ if (etapaFisgada==-1) {
 	cJogo.escalaPeixe=0;
 	obj_player.estado=estadosJogador.aguardando;
 }
+if (!audio_is_playing(musOverworld)) {
+	executarMusica(musOverworld);
+}
+audio_stop_sound(sndLoopAgua);

@@ -12,3 +12,4 @@ fisgado=false;
 particulas=part_system_create_layer(layer,false,psBolhas);
 part_system_automatic_draw(particulas,false);
 sprite_index=global.peixes[idPeixe].spritePeixe;
+somFuga = -1;
