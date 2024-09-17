@@ -36,12 +36,14 @@ draw_text(display_get_gui_width()/2,(display_get_gui_height()/2)-128,global.peix
 
 #region Barra peixes pescados
 draw_set_alpha(1);
+var yInicialBarra = (display_get_gui_height()/2) - ((array_length(global.peixes)/2)*32) - 8;
+draw_sprite_ext(sprBarraLateral,0,0,yInicialBarra,1,array_length(global.peixes)-((array_length(global.peixes)-1)/3),0,c_white,1);
 draw_set_color(c_maroon);
 draw_set_font(fntDescricao);
 draw_set_valign(fa_middle);
-draw_set_halign(fa_left);
+draw_set_halign(fa_center);
 for (var i=0; i<array_length(global.peixes); i++) {
-	draw_sprite_ext(global.peixes[i].spriteIcone,0,16,32+(i*32),1,1,0,global.peixesPegos[i]==0?c_black:c_white,0.5);
-	draw_text(32,32+(i*32),global.peixesPegos[i]);
+	draw_sprite_ext(global.peixes[i].spriteIcone,0,16,yInicialBarra+24+(i*32),1,1,0,global.peixesPegos[i]==0?c_black:c_white,0.5);
+	draw_text(40,yInicialBarra+24+(i*32),global.peixesPegos[i]);
 }
 #endregion
