@@ -22,4 +22,13 @@ if (tempoMinutos==0) {
 		numerosFXSuave[0]=(0+(tempoHoras div 10))*offsetNumeros;
 	}
 }
-alarm[0]=60;
+alarm[0]=1;
+//show_debug_message(fx_get_parameter_names(layerFXDia));
+show_debug_message(fx_get_parameters(layerFXDia));
+corDia = make_color_hsv(tempoHoras*10,192,255);
+fx_set_parameter(layerFXDia,"g_TintCol",[
+	color_get_red(corDia)/255,
+	color_get_green(corDia)/255,
+	color_get_blue(corDia)/255,
+	1,
+	]);
