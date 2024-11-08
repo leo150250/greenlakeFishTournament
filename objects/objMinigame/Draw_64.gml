@@ -1,3 +1,4 @@
+
 //Posicionamento do Minigame na tela
 var posX=(display_get_gui_width()/2);
 var posY=(display_get_gui_height()/2);

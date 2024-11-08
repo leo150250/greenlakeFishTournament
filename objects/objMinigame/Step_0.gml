@@ -57,9 +57,11 @@ switch (etapaFisgada) {
 			if (somFisgada!=1) {
 				somFisgada=1;
 				audio_stop_sound(sndMolineteLento);
+				audio_stop_sound(sndMolineteRapido);
 				executarSom(sndMolineteRapido,true);
 			}
 			if (porcentagemFisgada<=0) {
+				audio_stop_sound(sndMolineteLento);
 				audio_stop_sound(sndMolineteRapido);
 				etapaFisgada=-1;
 				raioMinigame=0.975;
@@ -117,7 +119,9 @@ raioMinigameBarraFX += (raioMinigameBarraFoco - raioMinigameBarra) / 8;
 raioMinigameBarra += (raioMinigameBarraFX - raioMinigameBarra) / 16;
 #endregion
 
-if (ControleMenu()) {
+if (ControleMenu() && (etapaFisgada!=-1)) {
+	audio_stop_sound(sndMolineteLento);
+	audio_stop_sound(sndMolineteRapido);
 	etapaFisgada=-1;
 	raioMinigame=0.975;
 	raioMinigameBarra=0.975;
