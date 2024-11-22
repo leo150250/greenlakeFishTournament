@@ -1,4 +1,6 @@
-display_set_gui_maximize(2,2,0,0);
+reajuste_y = window_get_height()/494.5054945054945
+reajuste_x = window_get_width()/879.1208791208791
+display_set_gui_maximize(reajuste_x,reajuste_y,0,0);
 tempoMinutos=0;
 tempoHoras=6;
 offsetNumeros=-51;
